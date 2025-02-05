@@ -96,6 +96,7 @@ body{
 
 label,input{
   display:flex;
+  
   margin-bottom: .5vh;
   margin-right: 5vw;
 
@@ -110,23 +111,29 @@ label,input{
 input {
   
     position:relative;
-    
     font-size: 100%;
-    padding: 3px;
+    padding: 5px 5px;
+    box-sizing: border-box;
     display: inline-block;
     border-radius: .5em;
     border-width: thin;
+    border-color:#779ECB;
+
+
 }
 
-input[type=text] {
-    padding: 5px 5px;
-    box-sizing: border-box;
-  }
+input:focus {
+    outline-color: #678ab2;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 255, .2);
 
-input[type=password] {
-    letter-spacing: -5px;
-    font-weight:bold;
 }
+
+
+input:invalid {
+    outline-color: red;
+    border-color:red;
+}
+
 
 button {
     border-radius: 1em;
@@ -159,18 +166,20 @@ label {
 .socials{
     display:flex;
     width:100%;
-    justify-content: center;
+    justify-content: start;
     height: fit-content;
 }
 
 ul {
     display: flex;
     list-style-type: none;
+    padding-left: 1vw;
 
 }
 
 li {
-    padding: 1vh 1vw;
-    margin-top: 1vh;
+    padding: 1vw;
+    
 }
+
 
